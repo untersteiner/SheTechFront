@@ -1,3 +1,29 @@
+/*------------------------------------------------------------------
+    Version: 1.0
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+    [Table of contents]
+
+    1. DEFAULT VERSION (Check style.css and colors.css)
+    2. HOSTING VERSION
+    3. SEO VERSION
+    4. WATCH VERSION
+    5. APP VERSION
+    6. CLINIC VERSION
+    7. REAL ESTATE VERSION
+    8. POLITICS VERSION
+    9. BARBER VERSION
+    10. BUILDING VERSION
+
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+    1. HOSTING VERSION
+-------------------------------------------------------------------*/
+
 body.host_version .icon_wrap i,
 body.host_version .customwidget li i{
     color: #2d3032 !important;
@@ -15,6 +41,11 @@ body.host_version .btn-light {
 body.host_version .stat-wrap h3 {
     color: #ffffff !important;
 }
+
+
+/**************************************
+GRADIENTS 
+**************************************/
 
 body.host_version .icon_wrap:hover,
 body.host_version .icon-wrapper:hover i,
@@ -35,7 +66,7 @@ body.host_version .icon-wrapper:hover i:hover,
 body.host_version .grd1:hover,
 body.host_version .grd1:focus {
     background-position: 100px;
-    color: black !important;
+    color: #ffffff !important;
     background: #008DE8;
 }
 
@@ -70,7 +101,7 @@ body.host_version .checkdomain-wrapper .form-group {
     padding: 10px;
     border: 1px solid #e9e9ec;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 body.host_version .checkdomain hr {
@@ -104,7 +135,6 @@ body.host_version .checkdomain-wrapper .checkbox {
     padding-left: 5px;
     text-align: left;
 	width: 10%;
-	float: left;
 	position: relative;
 	background: #008DE8;
 }

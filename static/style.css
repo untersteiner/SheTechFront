@@ -1,4 +1,13 @@
+/*------------------------------------------------------------------
+    IMPORT FONTS
+-------------------------------------------------------------------*/
+
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+
+/*------------------------------------------------------------------
+    IMPORT FILES
+-------------------------------------------------------------------*/
+
 @import url(css/animate.css);
 @import url(css/animate.min.css);
 @import url(css/bootstrap-touch-slider.css);
@@ -8,6 +17,10 @@
 @import url(css/owl.carousel.css);
 @import url(css/font-awesome.min.css);
 
+/*------------------------------------------------------------------
+    SKELETON
+-------------------------------------------------------------------*/
+
 body {
     color: #333333;
     font-size: 15px;
@@ -15,6 +28,9 @@ body {
     line-height: 1.80857;
 }
 
+body.demos .section {
+    background: url(images/bg.png) repeat top center #f2f3f5;
+}
 
 body.demos .section-title img {
     max-width: 280px;
@@ -153,6 +169,11 @@ blockquote {
     padding: 30px;
 }
 
+
+/*------------------------------------------------------------------
+    WP CORE
+-------------------------------------------------------------------*/
+
 .first {
     clear: both
 }
@@ -238,6 +259,8 @@ a img.aligncenter {
     padding: 0 4px 5px;
 }
 
+
+/* Text meant only for screen readers. */
 
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
@@ -428,7 +451,7 @@ a img.aligncenter {
 }
 @keyframes spin {
   100% {
-    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -570,8 +593,8 @@ a img.aligncenter {
 
 
 
-.top-navbar.fixed-menu .bg-light {
-    position: fixed;
+.top-navbar .fixed-menu .bg-light {
+    
     top: 0;
     width: 100%;
     z-index: 9999;
@@ -618,8 +641,7 @@ a img.aligncenter {
   content: '';
   position: absolute;
   z-index: 1;
-  border-radius: 50px;
-  font-weight: bold;
+  border-radius: 10px;
 }
 
 .navbar-right li a.hover-btn-new:hover span {
@@ -650,7 +672,6 @@ a img.aligncenter {
   width: 0;
 }
 
-
 .navbar-toggler{
 	background: #ffffff;
 	border-radius: 0px;
@@ -679,6 +700,30 @@ a img.aligncenter {
 
 .box-slider{
 	height: 100%;
+}
+
+
+.box-slider .carousel-control-prev{
+	background: #008DE8;
+	position: absolute;
+	left: 0px;
+	font-size: 38px;
+	top: 40%;
+	width: 60px;
+	height: 60px;
+	line-height: 20px;
+	opacity: 1;
+}
+.box-slider .carousel-control-next{
+	background: #008DE8;
+	position: absolute;
+	right: 0px;
+	font-size: 38px;
+	top: 40%;
+	width: 60px;
+	height: 60px;
+	line-height: 20px;
+	opacity: 1;
 }
 
 .first-section .big-tagline a{
@@ -749,6 +794,8 @@ a img.aligncenter {
 	height: 100%;
 	width: 100%;
 }
+
+
 
 /*------------------------------------------------------------------
     SECTIONS
@@ -1029,6 +1076,419 @@ a img.aligncenter {
 .customwidget{
 	margin-top: 30px;
 }
+
+/*------------------------------------------------------------------
+    PORTFOLIO
+-------------------------------------------------------------------*/
+
+.item-h2,
+.item-h1 {
+    height: 100% !important;
+    height: auto !important;
+}
+
+.isotope-item {
+    z-index: 2;
+    padding: 0;
+}
+
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item {
+    /* change duration value to whatever you like */
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+
+.portfolio-filter ul {
+    padding: 0;
+    z-index: 2;
+    display: block;
+    position: relative;
+    margin: 0;
+}
+
+.portfolio-filter ul li {
+    border-radius: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.portfolio-filter ul li:last-child:after {
+    content: "";
+}
+
+.portfolio-filter ul li .btn-dark {
+    box-shadow: none;
+    background-color: transparent;
+    border: 1px solid #e6e7e6 !important;
+    color: #1f1f1f;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 10px 30px;
+}
+
+.da-thumbs {
+    list-style: none;
+    position: relative;
+    padding: 0;
+}
+
+.da-thumbs .pitem {
+    margin: 0;
+    padding: 15px;
+    position: relative;
+}
+
+.da-thumbs .pitem a,
+.da-thumbs .pitem a img {
+    display: block;
+    position: relative;
+}
+
+.da-thumbs .pitem a {
+    overflow: hidden;
+}
+
+.da-thumbs .pitem a div {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+}
+
+.da-thumbs .pitem a div h3 {
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 30px 15px;
+    text-transform: capitalize;
+    font-weight: normal;
+}
+
+.da-thumbs .pitem a div h3 small {
+    display: block;
+    color: #ffffff;
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.da-thumbs .pitem a div i {
+    background-color: #1f1f1f;
+    position: absolute;
+    color: #ffffff !important;
+    bottom: 0;
+    font-size: 15px;
+    z-index: 12;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+/*------------------------------------------------------------------
+    TESTIMONIALS
+-------------------------------------------------------------------*/
+
+.logos img {
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 100%;
+    opacity: 0.3;
+}
+
+.logos img:hover {
+    opacity: 1;
+}
+
+.desc h3 i {
+    color: #008DE8;
+    font-size: 37px;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.desc {
+    padding: 30px;
+    position: relative;
+    background: #000;
+    border: 1px solid #111111;
+}
+
+.testi-meta {
+    display: block;
+    margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.testi-meta img{
+	display: inline-block !important; 
+}
+
+.testimonial h4 {
+    font-size: 18px;
+    color: #ffffff;
+    padding: 13px 0 0;
+}
+
+.testimonial img {
+    max-width: 55px;
+}
+
+.testimonial small {
+    margin-top: 7px;
+    font-size: 16px;
+    display: block;
+}
+
+.testimonial {
+    background-color: transparent;
+	max-width: 760px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.testimonial h3 {
+    padding: 0 0 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.testimonial small,
+.testimonial .lead {
+    background-color: transparent;
+    color: #aaa;
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.testimonial p:after {
+    display: none;
+}
+
+.testi-carousel.owl-carousel .owl-item.active.center .testimonial{
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+
+
+
+/*------------------------------------------------------------------
+    PRICING TABLES
+-------------------------------------------------------------------*/
+
+.pricing-table {
+    margin: 0px;
+    background: #fff;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-table i {
+    width: 30px;
+    color: #c2c2c2;
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 5px;
+    border-right: 1px solid #ececec;
+}
+
+.pricing-table .btn-dark {
+    padding: 10px 24px;
+    font-size: 15px;
+}
+
+.pricing-table strong {
+    font-weight: 600;
+    margin-right: 6px;
+    color: #1f1f1f;
+}
+
+.pricing-table-header {
+    padding: 30px 0 25px 0;
+    background: #ffffff;
+}
+
+.pricing-table-header h2 {
+    font-size: 31px;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+.pricing-table-header h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #aaaaaa;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.pricing-table-space {
+    height: 10px;
+}
+
+.pricing-table-text {
+    margin: 15px 30px 0 30px;
+    padding: 0 10px 15px 10px;
+    border-bottom: 1px solid #ececec;
+    font-weight: 300;
+    line-height: 30px;
+    color: #c2c2c2;
+    font-size: 16px;
+}
+
+.pricing-table-text p {
+    font-weight: 400;
+}
+
+.pricing-table-features {
+    margin: 15px 30px 0 30px;
+    padding: 0 10px 15px 30px;
+    border-bottom: 1px solid #ececec;
+    text-align: left;
+    line-height: 30px;
+    font-size: 16px;
+    color: #c2c2c2;
+}
+
+.pricing-table-highlighted h3,
+.pricing-table-highlighted h2 {
+    color: #ffffff !important;
+}
+
+.pricing-table-sign-up {
+    margin-top: 25px;
+    padding-bottom: 30px;
+}
+
+.pricing-table-sign-up a{
+	position: relative;
+	padding: 13px 40px;
+	font-size: 18px;
+	display: inline-block;
+}
+.pricing-table-sign-up a,
+.pricing-table-sign-up a.hover-btn-new::after {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.pricing-table-sign-up a.hover-btn-new::before,
+.pricing-table-sign-up a.hover-btn-new::after {
+  background: #008DE8;
+  content: '';
+  position: absolute;
+  z-index: 1;
+}
+
+.pricing-table-sign-up a.hover-btn-new:hover span {
+  color: #333333;
+}
+.pricing-table-sign-up a.hover-btn-new::before {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.pricing-table-sign-up a.hover-btn-new::after {
+  background: #333333 !important;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.pricing-table-sign-up a.hover-btn-new span{
+	position: relative;
+	z-index: 2;
+	color: #fff;
+}
+.pricing-table-sign-up a.hover-btn-new:hover:after {
+  height: 0;
+  left: 50%;
+  top: 50%;
+  width: 0;
+}
+
+
+
+.pricing-table:hover {
+	transform: scale(1.05,1.06);
+	-webkit-transform: scale(1.05,1.06);
+	-moz-transform: scale(1.05,1.06);
+	-o-transform: scale(1.05,1.06);
+	transition: 0.5s all ease;
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	-ms-transition: 0.5s all ease;
+}
+
+/* Highlighted table */
+
+.pricing-table-highlighted {
+    margin-top: 0;
+}
+
+.m130 {
+    margin-top: 130px;
+}
+
+.nav-pills {
+    border: 1px solid #e1e1e1;
+}
+
+.nav-pills > li {
+    width: 50%;
+    padding: 10px;
+    float: left;
+    margin: 0 !important;
+}
+
+.nav-pills > li > a {
+    margin: 0!important;
+    text-align: center;
+    background-color: #f4f4f4;
+	display: block;
+	padding: 10px 0px;
+}
+
 
 /*------------------------------------------------------------------
     ICON BOXES
@@ -1339,6 +1799,161 @@ hr.invis1 {
     transform: translateX(-50%);
     background: url("uploads/design.jpg") no-repeat;
 }
+
+
+/*------------------------------------------------------------------
+    FEATURES
+-------------------------------------------------------------------*/
+
+.customwidget h1 {
+    font-size: 44px;
+    color: #333333;
+    padding: 15px 0 25px;
+    margin: 0;
+    line-height: 1 !important;
+    font-weight: 300;
+}
+
+.customwidget ul {
+    padding: 0;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.customwidget li i {
+    margin-right: 5px;
+}
+
+.customwidget li {
+    color: #333333;
+    margin-right: 10px;
+}
+
+.image-center img {
+    position: relative;
+    margin: 0 0 -208px;
+    z-index: 10;
+    padding-right: 30px;
+    text-align: center;
+}
+
+.customwidget p {
+    font-style: normal;
+    font-size: 18px;
+    padding: 0 0 10px;
+}
+
+.img-center img {
+    width: 100%;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+}
+
+.img-center {
+    margin: auto;
+}
+
+#features li p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#features li {
+    display: table;
+    width: 100%;
+    margin: 35px 0;
+    cursor: pointer;
+}
+
+.features-left,
+.features-right {
+    padding: 0 10px;
+}
+
+.features-right li:last-child,
+.features-left li:last-child {
+    margin-bottom: 0px;
+    padding-bottom: 0 !important;
+}
+
+.features-right li i,
+.features-left li i {
+    width: 68px;
+    height: 68px;
+    line-height: 68px;
+    display: table;
+    border-radius: 50%;
+    font-size: 26px;
+    background-color: #f2f3f5;
+    margin: 0 auto 22px;
+    position: relative;
+    text-align: center;
+    z-index: 55;
+    transition: .4s;
+    padding: 0;
+}
+
+#features i img {
+    display: table;
+    margin: 0 auto;
+}
+
+.features-left li i:before,
+.features-right li i:before {
+    text-align: center;
+}
+
+.features-right li i .ico-current,
+.features-left li i .ico-current {
+    opacity: 1;
+    transition: .4s;
+    visibility: visible;
+}
+
+.features-right li i .ico-hover,
+.features-left li i .ico-hover {
+    opacity: 0;
+    transition: .4s;
+    visibility: hidden;
+    top: 19px;
+}
+
+.features-right li:hover .ico-current,
+.features-left li:hover .ico-current {
+    opacity: 0;
+    transition: .4s;
+    visibility: hidden;
+}
+
+.features-right li:hover .ico-hover,
+.features-left li:hover .ico-hover {
+    opacity: 1;
+    transition: .4s;
+    visibility: visible;
+}
+
+.features-right i {
+    float: left;
+}
+
+.fr-inner {
+    margin-left: 90px;
+}
+
+.features-left i {
+    float: right;
+}
+
+.fl-inner {
+    text-align: right;
+    margin-right: 90px;
+}
+
+#features h4 {
+    text-transform: capitalize;
+    margin: 0;
+    font-size: 19px;
+}
+
 
 /*------------------------------------------------------------------
     CONTACT
@@ -2330,8 +2945,6 @@ span.m_1 {
     }
 }
 
-
-.pricingTable-sign-up a{}
 .pricingTable-sign-up a{
 	position: relative;
 	padding: 13px 40px;
@@ -2397,9 +3010,6 @@ span.m_1 {
 	color: #121212;
 }
 
-.customer-box{
-	
-}
 .customer-box .nav-tabs{
 	border-bottom: none;
 	padding: 20px;
@@ -2545,6 +3155,25 @@ span.m_1 {
   left: 50%;
   top: 50%;
   width: 0;
+}
+
+
+
+.img-bg-01{
+	background: url(images/img-01.jpg) no-repeat center;
+	background-size: cover;
+}
+.img-bg-02{
+	background: url(images/img-02.jpg) no-repeat center;
+	background-size: cover;
+}
+.img-bg-03{
+	background: url(images/img-03.jpg) no-repeat center;
+	background-size: cover;
+}
+.img-bg-04{
+	background: url(images/img-04.jpg) no-repeat center;
+	background-size: cover;
 }
 
 
